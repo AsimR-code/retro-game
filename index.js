@@ -72,7 +72,7 @@ function generateBoard(){
   let ok=false;
   while(!ok){
     mines=new Set();
-    const density=Math.max(0,Math.min(0.8,parseFloat(document.getElementById("mineRatio").value)||0.25));
+    const density=Math.max(0,Math.min(0.8,parseFloat(document.getElementById("mineRatio").value)||0.5));
     for(let rr=0;rr<ROWS;rr++){
       for(let cc=0;cc<COLS-1;cc++){
         if(cc===COLS-2) continue;
