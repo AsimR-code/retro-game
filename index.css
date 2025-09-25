@@ -1,0 +1,31 @@
+ html, body {
+      margin:0; height:100%; width:100%;
+      display:flex; justify-content:center; align-items:center;
+      background:#0f1220; color:#e5e7eb;
+      font-family:sans-serif; overflow:hidden;
+    }
+    .game { text-align:center; width:min(92vmin,720px); }
+    .controls { margin-bottom:12px; display:flex; gap:10px; justify-content:center; }
+    .controls input, .controls button {
+      padding:6px 10px; border-radius:6px; border:1px solid #334155;
+      background:#0b1220; color:#e5e7eb; font-weight:600;
+    }
+    .controls button { cursor:pointer; }
+    .controls button:hover { background:#101830; }
+    .status { margin-top:8px; min-height:1.4rem; }
+    .grid { display:grid; grid-template-columns:repeat(9,1fr); gap:6px; width:100%; }
+    .cell {
+      position:relative; aspect-ratio:1/1;
+      display:grid; place-items:center;
+      background:#131a2a; border:1px solid #243045; color:#9fb0c8;
+      font-weight:700; border-radius:8px;
+    }
+    .cell.start { outline:2px dashed #22c55e; outline-offset:-3px; }
+    .cell.goal  { outline:2px dashed #f59e0b; outline-offset:-3px; }
+    .cell.player { box-shadow:0 0 0 3px rgba(56,189,248,.5); }
+    .cell.visited { background:#0f172a; }
+    .cell.mine-revealed { background:#7f1d1d !important; color:#fff; }
+    .cell.goal.success-card { background:#2563eb !important; color:#fff;font-size: 10px !important; }
+    .cell.goal.fail-card { background:#374151 !important; color:#fff; }
+    .cell.debug-mine { background:#7f1d1d55 !important; }
+    .brand { margin-top:6px; font-weight:800; color:#8ab5ff; font-size:.9rem; }
